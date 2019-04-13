@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <title>Assignment 10</title>
+  </head>
+
+  <body>
+    <h1>Hans J. Wegner Chairs</h1>
+    <div id="app" v-cloak class="list-container">
+      <table>
+        <thead class="list-head">
+          <span class="name"><th>Name</th></span>
+          <span class="model"><th>Model</th></span>
+          <span class="year"><th>Year</th></span>
+          <span class="material"><th>Materials</th></span>
+          <span class="height"><th>Height (cm)</th></span>
+        </thead>
+        <tbody>
+         <tr
+         v-for="(chairs, index) in consoles"
+         v-bind:class="{special:index===2, regular:index!==2}">
+            <td>{{chairs.name}}</td>
+            <td>{{chairs.model}}</td>
+            <td>{{chairs.year}}</td>
+            <td>{{chairs.materials}}</td>
+            <td>{{chairs.height}}</td>
+            <td>
+              <button type="button" v-on:click="deleteChair(chairs)">delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+   <div class="legend"><p>= Catherine's favorite chair</p>
+        </div>
+
+      <form v-on:submit.prevent="addChair">
+        <fieldset>
+          <legend>
+            Add a chair
+          </legend>
+          <div class="form-group">
+            <label>Name: <input type="text" v-model="nameInput"/></label>
+          </div>
+          <div class="form-group">
+            <label>Model: <input type="text" v-model="modelInput"/></label>
+          </div>
+          <div class="form-group">
+            <label>Year: <input type="text" v-model="yearInput"/></label>
+          </div>
+          <div class="form-group">
+            <label>Materials: <input type="text" v-model="materialsInput"/></label>
+          </div>
+          <div class="form-group">
+            <label>Height: <input type="text" v-model="heightInput"/></label>
+          </div>
+          <div class="form-group">
+            <label>ID: <input type="text" v-model="idInput"/></label>
+          </div>
+          <button type="submit" id="add">Add chair</button>
+        </fieldset>
+      </form>
+          </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

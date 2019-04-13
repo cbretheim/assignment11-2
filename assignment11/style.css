@@ -1,0 +1,85 @@
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 14px;
+    background: #f7f6f4;
+    margin: 2em;
+}
+
+.list-container {
+  padding: 5px;
+  margin-bottom: 2em;
+}
+
+th {
+  /* display: inline-block; */
+  width: 25%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+td {
+  padding: 0.4em;
+}
+
+h1 {
+  color: #b2aca2;
+  text-align: center;
+}
+
+.special, .legend {
+  background-color: #d1c9bc;
+}
+
+.regular {
+  background-color: #ede7dc;
+}
+
+.legend {
+  max-width: 30%;
+  font-size: 0.8em;
+  line-height: 1.8em;
+  text-align: center;
+  margin-left: 0.6em;
+}
+
+form {
+  margin-top: 3em;
+}
+
+fieldset {
+  position: relative;
+  border: 1px solid #d1c9bc;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+legend {
+  font-size: 1.5em;
+}
+
+input[type=text]:focus {
+  outline: none;
+  border: 3px solid #d1c9bc;
+}
+
+button {
+  border: none;
+  padding: 4px;
+}
+
+button:hover {
+  background-color: #f45c42;
+  color: white;
+}
+
+#add {
+  background-color: #d1c9bc;
+  padding: 5px 30px;
+}
+
+#add:hover {
+  background-color: #7eaa98;
+}
